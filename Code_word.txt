@@ -1,0 +1,133 @@
+//ID
+R_type		0	I or J type
+		1	R Type
+		//Used in RR for Selecting Imm as SRC1
+
+alu_op		000	No_FLAGCHANGE Addition
+			
+		001	FLAG_CHANGE_ADDITION NO COND
+		010	FLAG_CHANGE_ADDITION C COND
+		011	FLAG_CHANGE_ADDITION Z COND
+		
+		100	FLAG_CHANGE_NAND NO COND
+		101	FLAG_CHANGE_NAND C COND
+		110	FLAG_CHANGE_NAND Z COND
+		
+		111	Not USed
+
+
+RD		00 	RA
+		01	RB
+		10	RC
+		11	Load/Store Multiple R
+
+W_reg 		0	No_write_to_reg
+		1	write_to_reg
+
+
+W_mem 		0	No_write_to_memory
+		1	write_to_memory
+
+
+			
+Sel96 		0	Select 6
+		1	Select 9
+
+LHi 9->16 	0	Not executing Lhi using ans
+		1 	executing Lhi or LM
+		//SHould be 0 for Selecting ans in EX STATE
+			
+		
+LMstart     	0x	NO Multiple operation
+		10	Register to memory SM
+		11	Memory to register LM
+		//10 & 11 is used to Data in for FROM RD_RR in RR
+		// MUX in MEM as LMStart|
+
+LW_SR		0	other
+		1	Load or Store
+		//Meant for RB+ imm and release RA as one opperand
+		//		RB in SRC0
+		// DATA B on src0 when LW_SR =0
+			
+MEM_ANS		0	MEM_Data
+		1	ANS_Data
+
+JumP		00	No Jump
+		01	Conditional Jump 
+		10	Uncondtional Jump REG
+		11	UNconditional Jump IMMI
+		// JUMP| decide at exe state for pc+1 and Ans
+
+//NoT required
+JL_JR		1	Jump and Link
+		0	Jump and register
+
+J_B		1	Jump
+		0	BEQ
+
+*/*/*
+Link		1	Pc+1 store to RA at exec
+		0	others
+
+/*/*/*//*/*//*/*/**/*/*/*/*/*/*/*/*/*/*/*/*/OUTPUT PORTS:-
+/*
+				R_type
+				RD
+				W_reg
+				W_mem
+				sel96
+				LHi
+				alu_op
+				LMstart
+				LW_SR
+				MEM_ANS	
+				JumP
+				SelPC
+				JL_JR
+				J_B
+
+				R_type=1'b;
+				RD=2'b;
+				W_reg=1'b;
+				W_mem=1'b;
+				sel96=1'b;
+				LHi=1'b;
+				alu_op=3'b;
+				LMstart=2'b;
+				LW_SR=1'b;
+				MEM_ANS=1'b;
+				Jump=2'b;
+				JL_JR=1'b;
+				J_B=1'b;
+
+*/
+
+
+//Forwarding
+
+
+FWD_RA_N_EX_MEM_WB	00	DATA from Register Bank RA
+			01	DATA from Execution
+			10	DATA from memory acces
+			11	DATA from WB
+					
+FWD_RB_N_EX_MEM_WB	00	DATA from Register Bank RB
+			01	DATA from Execution
+			10	DATA from memory acces
+			11	DATA from WB
+
+
+//Hazard Protection
+	
+
+//*/**/*/*/*///*//*//
+Force_M		0	Stop_everyting for M Instruction
+		1	Stop_everyting for M Instruction
+/*/*///*/*///*/*//*//
+SelPC		00	pc_1
+		01	pc_immediate
+		10	Data_B
+		11	R7_Data
+
+IF Executed BEq  then OKay is maintained ,See the Flow for pc of current (RR) + immidieate
