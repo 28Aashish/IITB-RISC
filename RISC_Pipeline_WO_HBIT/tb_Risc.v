@@ -4,7 +4,7 @@ module tb_RIsC ();
 	reg clk;
 	reg reset_n;
 	
-	RIsC uut (clk,reset_n);
+	RISC uut (clk,reset_n);
 
 	parameter period=20;
 	
