@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Study/GIT/IITB_Pipeline_Processor/RISC_Pipeline_WO_HBIT
 vadder
-Z1 !s110 1589434285
+Z1 !s110 1589819915
 !i10b 1
 !s100 >Hdfd1=7oA=lc==hf4o9c0
 IZ<K8MU?4RcmkkgD>ZckEb1
@@ -23,9 +23,9 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1589434285.000000
-Z5 !s107 tb_Risc.v|sign_9_16.v|sign_6_16.v|mux4.v|mux4 _3.v|mux2.v|mux2 _3.v|instruction_mem.v|iDecoder.v|data_mem.v|alu.v|adder.v|Reg_file.v|RIsC.v|PC.v|M_inst_addr_GEN.v|M_inst_Controller.v|HM.v|Datapath_RR_EX.v|Datapath_MEM_WB.v|Datapath_IF_ID.v|Datapath_ID_RR.v|Datapath_EX_MEM.v|DATA_FWD.v|
-Z6 !s90 -reportprogress|300|DATA_FWD.v|Datapath_EX_MEM.v|Datapath_ID_RR.v|Datapath_IF_ID.v|Datapath_MEM_WB.v|Datapath_RR_EX.v|HM.v|M_inst_Controller.v|M_inst_addr_GEN.v|PC.v|RIsC.v|Reg_file.v|adder.v|alu.v|data_mem.v|iDecoder.v|instruction_mem.v|mux2 _3.v|mux2.v|mux4 _3.v|mux4.v|sign_6_16.v|sign_9_16.v|tb_Risc.v|
+Z4 !s108 1589819915.000000
+Z5 !s107 tb_RISC.v|sign_9_16.v|sign_6_16.v|mux4.v|mux4 _3.v|mux2.v|mux2 _3.v|instruction_mem.v|iDecoder.v|data_mem.v|alu.v|adder.v|Reg_file.v|RISC.v|PC.v|M_inst_addr_GEN.v|M_inst_Controller.v|HM.v|Datapath_RR_EX.v|Datapath_MEM_WB.v|Datapath_IF_ID.v|Datapath_ID_RR.v|Datapath_EX_MEM.v|DATA_FWD.v|
+Z6 !s90 -reportprogress|300|DATA_FWD.v|Datapath_EX_MEM.v|Datapath_ID_RR.v|Datapath_IF_ID.v|Datapath_MEM_WB.v|Datapath_RR_EX.v|HM.v|M_inst_Controller.v|M_inst_addr_GEN.v|PC.v|RISC.v|Reg_file.v|adder.v|alu.v|data_mem.v|iDecoder.v|instruction_mem.v|mux2 _3.v|mux2.v|mux4 _3.v|mux4.v|sign_6_16.v|sign_9_16.v|tb_RISC.v|
 !i113 1
 Z7 tCvgOpt 0
 valu
@@ -239,11 +239,11 @@ ni@decoder
 vinstr_mem
 R1
 !i10b 1
-!s100 ?EOgZWz@CVk^n_Ff5JY@K3
-IjL9@`bO4<>^P_EZCCkaHe2
+!s100 6mkacOB7alOZ3OVgk;DHi0
+I7b=[52l7Zi5FK5gSO9`OW3
 R2
 R0
-w1587051817
+w1589819828
 8instruction_mem.v
 Finstruction_mem.v
 L0 1
@@ -421,7 +421,7 @@ R6
 R7
 n@reg_file
 vRIsC
-R1
+!s110 1589434285
 !i10b 1
 !s100 hd40mnN<k=09U`]^995mg2
 IVEY5Y@a716;zGRI4>R3mK3
@@ -435,12 +435,33 @@ R3
 r1
 !s85 0
 31
+!s108 1589434285.000000
+!s107 tb_Risc.v|sign_9_16.v|sign_6_16.v|mux4.v|mux4 _3.v|mux2.v|mux2 _3.v|instruction_mem.v|iDecoder.v|data_mem.v|alu.v|adder.v|Reg_file.v|RIsC.v|PC.v|M_inst_addr_GEN.v|M_inst_Controller.v|HM.v|Datapath_RR_EX.v|Datapath_MEM_WB.v|Datapath_IF_ID.v|Datapath_ID_RR.v|Datapath_EX_MEM.v|DATA_FWD.v|
+!s90 -reportprogress|300|DATA_FWD.v|Datapath_EX_MEM.v|Datapath_ID_RR.v|Datapath_IF_ID.v|Datapath_MEM_WB.v|Datapath_RR_EX.v|HM.v|M_inst_Controller.v|M_inst_addr_GEN.v|PC.v|RIsC.v|Reg_file.v|adder.v|alu.v|data_mem.v|iDecoder.v|instruction_mem.v|mux2 _3.v|mux2.v|mux4 _3.v|mux4.v|sign_6_16.v|sign_9_16.v|tb_Risc.v|
+!i113 1
+R7
+n@r@is@c
+vRISC
+R1
+!i10b 1
+!s100 _zhM1zY]c3>F1U3WYzLQ20
+IDCezSKTT<=n7jiBkQJ3@z1
+R2
+R0
+w1589816313
+8RISC.v
+FRISC.v
+L0 1
+R3
+r1
+!s85 0
+31
 R4
 R5
 R6
 !i113 1
 R7
-n@r@is@c
+n@r@i@s@c
 vsign_6_16
 R1
 !i10b 1
@@ -484,13 +505,13 @@ R7
 vtb_RIsC
 R1
 !i10b 1
-!s100 F_6SR;SU:`HgRe=JQ9BC@0
-IHjj;mBZCcGcdQjOOFQ^?23
+!s100 H:K:ekhTX]^3fR]k=lD2d1
+IHa6PDi=;CY_DZDiFWWV>O3
 R2
 R0
-w1584527596
-8tb_Risc.v
-Ftb_Risc.v
+w1589816332
+8tb_RISC.v
+Ftb_RISC.v
 L0 2
 R3
 r1
