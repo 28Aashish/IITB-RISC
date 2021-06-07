@@ -37,7 +37,6 @@ Following are the points to be noted:-
 	1.The Instruction is in "instruction_mem.v" .Which has some mixed instruction execution
 	2.The Size of Memory(Data,Instruction & History) is cut down to 200 for the implementable purpose.
 	3.The "RISC.v" is the Top Module and "tb_RISC.v" is the Testbench for clock and Reset of Processor.
-	4.
 	
 -Made By
 Aashish Tamrakar
